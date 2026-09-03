@@ -1,0 +1,54 @@
+/* Feedback panels use index.css .feedback--correct / .feedback--incorrect base */
+
+.feedback--correct,
+.feedback--incorrect {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.feedback-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 700;
+  font-size: 1.0625rem;
+}
+
+.feedback-icon {
+  font-size: 1.125rem;
+}
+
+.feedback-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.feedback-flavor {
+  font-size: 0.9375rem;
+}
+
+.feedback-field-note {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  background: rgba(0, 212, 170, 0.05);
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-md);
+}
+
+.feedback-field-note-label {
+  font-size: 0.6875rem;
+  letter-spacing: 0.15em;
+}
+
+.feedback-field-note p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.feedback-message {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}

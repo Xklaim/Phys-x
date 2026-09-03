@@ -1,0 +1,91 @@
+/* ─── Multiple Choice ────────────────────────────────────────────────────────── */
+
+.mc-fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.mc-legend {
+  font-size: 0.6875rem;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--space-2);
+  display: block;
+}
+
+.mc-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.mc-option {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  line-height: 1.5;
+}
+
+.mc-option:hover:not(:has(.mc-radio:disabled)) {
+  border-color: var(--accent-primary);
+  background: var(--accent-primary-dim);
+}
+
+.mc-option--selected {
+  border-color: var(--accent-primary) !important;
+  background: rgba(0, 212, 170, 0.1) !important;
+}
+
+.mc-radio {
+  display: none;
+}
+
+.mc-key {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  flex-shrink: 0;
+  min-width: 1.5rem;
+  margin-top: 2px;
+}
+
+.mc-option--selected .mc-key {
+  color: var(--accent-primary);
+}
+
+.mc-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.mc-option--selected .mc-label {
+  color: var(--text-primary);
+}
+
+/* ─── Expression Input ────────────────────────────────────────────────────────── */
+
+.expr-input-wrap,
+.numeric-input-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.expr-label,
+.numeric-label {
+  font-size: 0.6875rem;
+  letter-spacing: 0.15em;
+}
+
+.expr-hint,
+.numeric-hint {
+  color: var(--text-dim);
+}
