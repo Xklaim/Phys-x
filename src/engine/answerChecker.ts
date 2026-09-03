@@ -1,4 +1,5 @@
-import { evaluate, parse } from 'mathjs';
+import { parse } from 'mathjs';
+import type { MathNode } from 'mathjs';
 import type { ChamberAnswer, NumericAnswer, ExpressionAnswer, MultipleChoiceAnswer } from '../types/chamber';
 
 // ─── Result shape ─────────────────────────────────────────────────────────────
@@ -96,8 +97,8 @@ export function checkExpression(
   answer: ExpressionAnswer,
 ): CheckResult {
   // Validate that the player input can be parsed
-  let playerNode: ReturnType<typeof parse>;
-  let answerNode: ReturnType<typeof parse>;
+  let playerNode: MathNode;
+  let answerNode: MathNode;
 
   try {
     playerNode = parse(playerInput);

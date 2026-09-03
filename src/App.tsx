@@ -1,11 +1,9 @@
-import React from 'react';
 import { GameProvider, useGame } from './context/GameContext';
 import { OpeningScreen } from './components/OpeningScreen';
 import { ActInterstitial } from './components/ActInterstitial';
 import { TopBar } from './components/TopBar';
 import { ChamberView } from './components/ChamberView';
 import { CompletionScreen } from './components/CompletionScreen';
-import { useGame as useGameInner } from './context/GameContext';
 import './index.css';
 
 function GameRouter() {

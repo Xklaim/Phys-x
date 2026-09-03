@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer, useEffect, useCallback } from 'react';
+import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import type { GameState, ChamberStat } from '../types/gameState';
 import { ACT_UNLOCK_THRESHOLDS } from '../types/gameState';
 import { saveState, loadState, resetState, defaultGameState } from '../engine/persistence';

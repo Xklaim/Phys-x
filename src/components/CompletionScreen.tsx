@@ -1,8 +1,6 @@
-import React from 'react';
 import { useGame } from '../context/GameContext';
 import { displayName } from '../engine/nameInterpolation';
 import { allChambers } from '../content/chambers/index';
-import { StarRating } from './StarRating';
 import './CompletionScreen.css';
 
 export function CompletionScreen() {

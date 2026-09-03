@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 interface Props {
   stars: 1 | 2 | 3;

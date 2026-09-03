@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useGame } from '../context/GameContext';
 import { checkAnswer } from '../engine/answerChecker';
 import { interpolate } from '../engine/nameInterpolation';
 import { ACTS } from '../content/acts';
 import { allChambers } from '../content/chambers/index';
-import { AnswerInput } from './AnswerInput';
-import { FeedbackPanel } from './FeedbackPanel';
-import { StarRating } from './StarRating';
+import { AnswerInput } from './AnswerInput.tsx';
+import { FeedbackPanel } from './FeedbackPanel.tsx';
+import { StarRating } from './StarRating.tsx';
 import './ChamberView.css';
 
 export function ChamberView() {
@@ -40,7 +40,7 @@ export function ChamberView() {
     } else {
       dispatch({ type: 'WRONG_ANSWER', chamberId: chamber.id });
       setFeedbackState('incorrect');
-      setFeedbackMessage(result.reason);
+      setFeedbackMessage(!result.correct ? result.reason : '');
     }
   };
 
@@ -131,7 +131,7 @@ export function ChamberView() {
             value={inputValue}
             onChange={setInputValue}
             onSubmit={handleSubmit}
-            disabled={feedbackState === 'correct'}
+            disabled={feedbackState !== 'idle'}
           />
           <div className="answer-controls">
             <button

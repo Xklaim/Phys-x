@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useGame } from '../context/GameContext';
 import './OpeningScreen.css';
 
@@ -28,7 +28,6 @@ export function OpeningScreen() {
   const [displayedLines, setDisplayedLines] = useState<string[]>([]);
   const [nameInput, setNameInput] = useState('');
   const [showNameField, setShowNameField] = useState(false);
-  const [isReady, setIsReady] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const lineIdx = useRef(0);
 

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useGame } from '../context/GameContext';
 import { ACTS } from '../content/acts';
 import { allChambers } from '../content/chambers/index';
 import { displayName } from '../engine/nameInterpolation';
-import { CodexPanel } from './CodexPanel';
+import { CodexPanel } from './CodexPanel.tsx';
 import './TopBar.css';
 
 export function TopBar() {
